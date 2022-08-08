@@ -1,0 +1,17 @@
+services:
+  api:
+    image: ingoboerner/vebidracor-api:2.0.0
+    ports:
+      - "8080:8080"
+    depends_on:
+      - metrics
+  metrics:
+    image: ingoboerner/dracor-metrics:v1.2.1
+    ports:
+      - "8030:8030"
+  frontend:
+    image: ingoboerner/dracor-frontend:v1.4.3_local
+    ports:
+      - "8088:80"
+    depends_on:
+      - api
