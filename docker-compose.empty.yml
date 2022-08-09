@@ -1,6 +1,6 @@
 services:
   api:
-    image: ingoboerner/dracor-api:v0.86.2_local
+    image: ingoboerner/dracor-api:v0.86.3_local
     ports:
       - "8080:8080"
     depends_on:
